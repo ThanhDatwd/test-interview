@@ -5,7 +5,8 @@ export const AppWrapper = styled(Box)(({ theme }) => ({
   width: "100%",
   height: "100%",
   minHeight: "100vh",
-  background: theme.palette.primary.main,
+  overflowX:'hidden'
+  // background: theme.palette.primary.main,
 }));
 
 // CUSTOM BOX FLEX

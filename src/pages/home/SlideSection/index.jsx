@@ -10,14 +10,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination, Keyboard } from "swiper/modules";
-import image1 from "~/assets/image1.png";
+import image1 from "~/assets/images/image1.png";
 import { BoxSlideWrapper } from "~/styles/homeStyle";
 const SlideSectionHomePage = () => {
   return (
     <Box sx={{ width: "100%" }}>
       <BoxFlexColumn sx={{ gap: "24px" }}>
         <BoxFlexColumnCenter sx={{ gap: "16px" }}>
-          <Typography variant="h3">How to bling charge</Typography>
+          <Typography variant="h3" textAlign={'center'}>How to bling charge</Typography>
           <Typography variant="h6" textAlign={"center"}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
@@ -53,7 +53,7 @@ const SlideSectionHomePage = () => {
                     <Typography variant="h4" fontWeight={600}>
                       NFT to the bone makes you collect project 3D
                     </Typography>
-                    <Typography variant="h6" fontWeight={400}>
+                    <Typography variant="h6" fontWeight={400}  sx={{display:{xs:'none',lg:'block'}}}>
                       We are a community based collection project featuring 3D
                       and NFT artwork. Cool 3D from me and comes in all kinds of
                       evil shape traits and sizes with a few surprises along the
@@ -75,7 +75,7 @@ const SlideSectionHomePage = () => {
                     <Typography variant="h4" fontWeight={600}>
                       NFT to the bone makes you collect project 3D
                     </Typography>
-                    <Typography variant="h6" fontWeight={400}>
+                    <Typography variant="h6" fontWeight={400}  sx={{display:{xs:'none',lg:'block'}}}>
                       We are a community based collection project featuring 3D
                       and NFT artwork. Cool 3D from me and comes in all kinds of
                       evil shape traits and sizes with a few surprises along the

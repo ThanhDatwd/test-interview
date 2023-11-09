@@ -7,22 +7,25 @@ import SlideSectionHomePage from "./SlideSection";
 import AdapterSectionHomePage from "./AdapterSection";
 import ProductInfoSectionHomePage from "./ProductInfoSection";
 import { BoxFlexColumn } from "~/styles/globalStyle";
+import { HomePageWrapper } from "~/styles/homeStyle";
+import BlingChargeSectionHomePage from "./BlingChargeSection";
 
 const HomePage = () => {
   return (
-    <Box sx={{ background: "#10033F" }}>
+    <HomePageWrapper>
       <Container>
         <Box sx={{ position: "relative" }}>
           <Header />
           <HeroSectionHomePage />
         </Box>
-        <BoxFlexColumn sx={{ gap: "100px" }} pb={"40px"}>
+        <BoxFlexColumn sx={{ gap: "50px" }} py={"40px"}>
           <SlideSectionHomePage />
+          <BlingChargeSectionHomePage/>
           <AdapterSectionHomePage />
           <ProductInfoSectionHomePage />
         </BoxFlexColumn>
       </Container>
-    </Box>
+    </HomePageWrapper>
   );
 };
 

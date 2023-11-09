@@ -1,7 +1,16 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
-const ButtonOutlined = () => {
-  return <div>sd</div>;
-};
+/* eslint-disable react/prop-types */
 
-export default ButtonOutlined;
+// styled
+import { ButtonOutlinedStyled } from './style'
+
+const  ButtonOutlined=({sx,children})=> {
+  return (
+    <ButtonOutlinedStyled
+      variant="outlined"
+      sx={sx}
+    >
+      {children}
+    </ButtonOutlinedStyled>
+  )
+}
+export default ButtonOutlined

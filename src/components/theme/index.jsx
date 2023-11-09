@@ -12,7 +12,7 @@ const theme = extendTheme({
           contrastText: "#ffff",
         },
         text: {
-          primary: "#FFFFFF",
+          primary: "black",
           secondary: "yellow",
         },
       },
@@ -24,11 +24,11 @@ const theme = extendTheme({
           contrastText: "#ffff",
         },
         secondary: {
-          main: "#FCFCFC",
+          main: "#8738EB",
           contrastText: "#ffff",
         },
         text: {
-          primary: "red",
+          primary: "#FFFFFF",
           secondary: "green",
         },
       },
