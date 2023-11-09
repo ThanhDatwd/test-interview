@@ -1,6 +1,4 @@
-
-
-function Ball2(props) {
+function IconBall1(props) {
   return (
     <svg
       width={180}
@@ -32,6 +30,6 @@ function Ball2(props) {
         />
       </defs>
     </svg>
-  )
+  );
 }
-export default Ball2
+export default IconBall1;

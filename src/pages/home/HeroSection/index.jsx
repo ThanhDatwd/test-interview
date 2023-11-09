@@ -13,7 +13,7 @@ const HeroSectionHomePage = () => {
     <BoxFlexCenter>
       <BoxFlexColumn sx={{ gap: "20px" }}>
         <Typography variant="h2">Charge & Earn</Typography>
-        <Typography variant="h6" fontWeight={400}>
+        <Typography variant="h6" fontWeight={300}>
           You can get started with your marketing automation in a few minutesand
           you can send email newsletter with your audienceYou can get started
           with your marketing automation in a few{" "}

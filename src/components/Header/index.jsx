@@ -1,4 +1,4 @@
-import {  Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
 import {
   BoxFlexCenter,
@@ -36,12 +36,12 @@ const Header = () => {
       <BoxFlexSpaceBetween>
         <BoxImage
           sx={{
-            height: "36px"
+            height: "36px",
           }}
         >
           <img src="/logoHeader.png" />
         </BoxImage>
-        <BoxFlexEnd gap={'0px'}>
+        <BoxFlexEnd gap={"0px"}>
           {navList.map((item, index) => {
             return (
               <NavItem

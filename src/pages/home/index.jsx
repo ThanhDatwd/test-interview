@@ -6,6 +6,7 @@ import HeroSectionHomePage from "./HeroSection";
 import SlideSectionHomePage from "./SlideSection";
 import AdapterSectionHomePage from "./AdapterSection";
 import ProductInfoSectionHomePage from "./ProductInfoSection";
+import { BoxFlexColumn } from "~/styles/globalStyle";
 
 const HomePage = () => {
   return (
@@ -15,9 +16,11 @@ const HomePage = () => {
           <Header />
           <HeroSectionHomePage />
         </Box>
-        <SlideSectionHomePage />
-        <AdapterSectionHomePage />
-        <ProductInfoSectionHomePage />
+        <BoxFlexColumn sx={{ gap: "100px" }}>
+          <SlideSectionHomePage />
+          <AdapterSectionHomePage />
+          <ProductInfoSectionHomePage />
+        </BoxFlexColumn>
       </Container>
     </Box>
   );
