@@ -132,7 +132,7 @@ export const styleAnimationContentTextProductInfoSection = {
   opacity: 0,
   "&.activeAnimation": {
     opacity: 1,
-    animation: "animationPhone3 3s linear ",
+    animation: "animationPhone3 2s linear ",
     "@keyframes animationPhone3": {
       "0%": {
         opacity: 0,
@@ -150,7 +150,7 @@ export const styleAnimationPhoneFutureProducInfoSection = {
   opacity: 0,
   "&.activeAnimation": {
     opacity: 1,
-    animation: "animationPhone4 3s linear  ",
+    animation: "animationPhone4 2s linear  ",
     "@keyframes animationPhone4": {
       "0%": {
         opacity: 0,
