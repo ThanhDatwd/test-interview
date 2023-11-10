@@ -20,6 +20,7 @@ import {
 const HeroSectionHomePage = () => {
   return (
     <BoxFlexCenter sx={{ height: "100vh", flexWrap: "wrap-reverse", gap: 0 }}>
+      {/* SIDE  RIGHT  */}
       <BoxFlexColumn
         sx={{
           width: { sm: "100%", lg: "50%" },
@@ -49,40 +50,16 @@ const HeroSectionHomePage = () => {
           width: { sm: "100%", lg: "50%" },
         }}
       >
-        <BoxUiHeroSection
-          sx={{ display: { xs: "none", lg: "block" } }}
-        ></BoxUiHeroSection>
-
-        <BoxFlexCenter sx={{ position: "relative", left: "-10%" }}>
-          <BoxImage
-            sx={{
-              position: "absolute",
-              bottom: "20%",
-              left: "-20%",
-              ...styleAnimationBall1HeroSection,
-            }}
-          >
+        <BoxUiHeroSection sx={{ display: { xs: "none", lg: "block" } }} />
+        {/* SIDE LEFT */}
+        <BoxFlexCenter sx={{ position: "relative", left: "-10%", top: "80px" }}>
+          <BoxImage sx={styleAnimationBall1HeroSection}>
             <img src={ball1} alt="" />
           </BoxImage>
-          <BoxImage
-            sx={{
-              position: "absolute",
-              right: "0%",
-              top: "0%",
-              transform: "translateX(50%)",
-              ...styleAnimationBall2HeroSection,
-            }}
-          >
+          <BoxImage sx={styleAnimationBall2HeroSection}>
             <img src={ball2} alt="" />
           </BoxImage>
-          <BoxImage
-            sx={{
-              position: "relative",
-              zIndex: 100,
-              width: "80%",
-              ...styleAnimationPhoneHeroSection,
-            }}
-          >
+          <BoxImage sx={styleAnimationPhoneHeroSection}>
             <img src={imagePhone1} />
           </BoxImage>
         </BoxFlexCenter>

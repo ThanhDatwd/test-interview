@@ -6,6 +6,7 @@ export const AppWrapper = styled(Box)(({ theme }) => ({
   height: "100%",
   minHeight: "100vh",
   overflowX: "hidden",
+   background: theme.palette.primary.main,
 }));
 
 // CUSTOM BOX FLEX
@@ -109,6 +110,7 @@ export const FooterWrapper = styled(Box)(({ theme }) => ({
 export const HeaderWrapper = styled(Box)(({ theme }) => ({
   padding: "15px 0px",
   position: "fixed",
+  // position:"relative",
   width: "100%",
   top: 0,
   left: 0,

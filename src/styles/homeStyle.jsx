@@ -36,6 +36,9 @@ export const styleAnimationContentTextHeroSection = {
   },
 };
 export const styleAnimationBall1HeroSection = {
+  position: "absolute",
+  bottom: "20%",
+  left: "-20%",
   animation: "animationBall1 2.5s linear infinite",
   "@keyframes animationBall1": {
     "0%": {
@@ -51,6 +54,10 @@ export const styleAnimationBall1HeroSection = {
 };
 
 export const styleAnimationBall2HeroSection = {
+  position: "absolute",
+  right: "0%",
+  top: "0%",
+  transform: "translateX(50%)",
   animation: "animationBall2 2s linear infinite",
   "@keyframes animationBall2": {
     "0%": {
@@ -65,6 +72,9 @@ export const styleAnimationBall2HeroSection = {
   },
 };
 export const styleAnimationPhoneHeroSection = {
+  position: "relative",
+  zIndex: 100,
+  width: "80%",
   animation: "animationPhone1 .5s linear ",
   "@keyframes animationPhone1": {
     "0%": {
@@ -87,13 +97,13 @@ export const styleAnimationPhoneHeroSection = {
 export const BoxUiHeroSection = styled(Box)(({ theme }) => ({
   position: "absolute",
   right: 0,
-  top: "0",
-  height: "80%",
+  top: 0,
+  height: "90%",
   width: "50%",
   background:
     "linear-gradient(359deg, #8738EB 15.94%, rgba(135, 56, 235, 0.00) 109.56%)",
-  borderBottomRightRadius: "40%",
-  borderBottomLeftRadius: "40%",
+  borderBottomRightRadius: "25vw",
+  borderBottomLeftRadius: "25vw",
 }));
 // CSS PRODUCT INFO
 

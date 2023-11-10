@@ -11,8 +11,8 @@ function App({ children }) {
         <RouterProviderConfig>
           <Header />
           {children}
-          <Footer />
         </RouterProviderConfig>
+        <Footer />
       </AppWrapper>
     </>
   );
