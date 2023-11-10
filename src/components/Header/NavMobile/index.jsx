@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import { Typography } from "@mui/material";
 import {
-  BoxFlex,
   BoxFlexCenter,
   BoxFlexColumn,
+  BoxFlexEnd,
   BoxFlexSpaceBetween,
   BoxImage,
   LightDarkModeBox,
@@ -49,7 +49,9 @@ const NavDisplayMobile = ({ isOpenNavMobile, setIsOpenNavMobile, navList }) => {
           })}
         </BoxFlexColumn>
       </BoxFlexColumn>
-      <BoxFlex sx={{ position: "absolute", bottom: 0, left: 0 }}>
+      <BoxFlexEnd
+        sx={{ position: "absolute", bottom: 0, left: 0, padding: "20px" }}
+      >
         <LightDarkModeBox>
           {mode === "light" ? (
             <DarkModeIcon onClick={() => setMode("dark")} />
@@ -57,7 +59,7 @@ const NavDisplayMobile = ({ isOpenNavMobile, setIsOpenNavMobile, navList }) => {
             <LightModeIcon onClick={() => setMode("light")} />
           )}
         </LightDarkModeBox>
-      </BoxFlex>
+      </BoxFlexEnd>
     </NavMobile>
   );
 };

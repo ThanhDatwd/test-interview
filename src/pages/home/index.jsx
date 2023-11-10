@@ -14,13 +14,13 @@ const HomePage = () => {
   return (
     <HomePageWrapper>
       <Container>
+        <Header />
         <Box sx={{ position: "relative" }}>
-          <Header />
           <HeroSectionHomePage />
         </Box>
         <BoxFlexColumn sx={{ gap: "50px" }} py={"40px"}>
           <SlideSectionHomePage />
-          <BlingChargeSectionHomePage/>
+          <BlingChargeSectionHomePage />
           <AdapterSectionHomePage />
           <ProductInfoSectionHomePage />
         </BoxFlexColumn>

@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import {
   BoxFlex,
   BoxFlexCenter,
@@ -11,6 +11,7 @@ import ball2 from "~/assets/ball2.svg";
 import ButtonOutlined from "~/components/CustomUi/ButtonOutlined";
 import ButtonContained from "~/components/CustomUi/ButtonContained";
 import {
+  BoxUiHeroSection,
   styleAnimationBall1HeroSection,
   styleAnimationBall2HeroSection,
   styleAnimationContentTextHeroSection,
@@ -48,20 +49,9 @@ const HeroSectionHomePage = () => {
           width: { sm: "100%", lg: "50%" },
         }}
       >
-        <Box
-          sx={{
-            position: "absolute",
-            right: 0,
-            top: "0",
-            height: "80%",
-            width: "50%",
-            background:
-              "linear-gradient(359deg, #8738EB 15.94%, rgba(135, 56, 235, 0.00) 109.56%)",
-            borderBottomRightRadius: "40%",
-            borderBottomLeftRadius: "40%",
-            display: { xs: "none", lg: "block" },
-          }}
-        ></Box>
+        <BoxUiHeroSection
+          sx={{ display: { xs: "none", lg: "block" } }}
+        ></BoxUiHeroSection>
 
         <BoxFlexCenter sx={{ position: "relative", left: "-10%" }}>
           <BoxImage

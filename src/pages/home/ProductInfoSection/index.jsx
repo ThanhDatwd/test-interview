@@ -12,6 +12,21 @@ import {
   styleAnimationPhoneFutureProducInfoSection,
   styleAnimationPhoneProducInfoSection,
 } from "~/styles/homeStyle";
+
+const phoneFutures = [
+  {
+    icon: iconBuy,
+    title: "Buy NPC adapter or take NPC 5W",
+  },
+  {
+    icon: iconPlug,
+    title: " Supper charge with 30w",
+  },
+  {
+    icon: iconSaveMoney,
+    title: "Save 100$ when buy it at store",
+  },
+];
 const ProductInfoSectionHomePage = () => {
   const sectionRef = useRef(null);
   const [isShowAnimation, setIsShowAnimation] = useState(false);
@@ -47,11 +62,7 @@ const ProductInfoSectionHomePage = () => {
           </BoxImage>
         </Grid>
         <Grid item lg={6} sm={12}>
-          <BoxFlexColumn
-            sx={{
-              gap: "40px",
-            }}
-          >
+          <BoxFlexColumn sx={{ gap: "40px" }}>
             <BoxFlexColumn
               className={isShowAnimation ? "activeAnimation" : ""}
               sx={styleAnimationContentTextProductInfoSection}
@@ -75,7 +86,7 @@ const ProductInfoSectionHomePage = () => {
             </BoxFlexColumn>
             <BoxFlexColumn sx={{ gap: "20px" }}>
               <Typography
-                textAlign={{ xs: "center", sm: "left" }}
+                textAlign={{ xs: "justify", sm: "left" }}
                 variant="h5"
                 fontWeight={400}
                 className={isShowAnimation ? "activeAnimation" : ""}
@@ -84,54 +95,32 @@ const ProductInfoSectionHomePage = () => {
                 Leverage on your Blingcharge charger and create a stern of
                 passive income at no cost.
               </Typography>
-              <BoxFlex
-                className={isShowAnimation ? "activeAnimation" : ""}
-                sx={{
-                  ...styleAnimationPhoneFutureProducInfoSection,
-                  animationDelay: "0.4s",
-                }}
-              >
-                <BoxFlex sx={{ width: "max-content" }}>
-                  <BoxImage sx={{ width: "80px" }}>
-                    <img src={iconBuy} alt="" />
-                  </BoxImage>
-                </BoxFlex>
-                <Typography variant="h5" fontWeight={400}>
-                  Buy NFT adapter or take NFT 5W___{" "}
-                </Typography>
-              </BoxFlex>
-              <BoxFlex
-                className={isShowAnimation ? "activeAnimation" : ""}
-                sx={{
-                  ...styleAnimationPhoneFutureProducInfoSection,
-                  animationDelay: "0.6s",
-                }}
-              >
-                <BoxFlex sx={{ width: "max-content" }}>
-                  <BoxImage sx={{ width: "80px" }}>
-                    <img src={iconPlug} alt="" />
-                  </BoxImage>
-                </BoxFlex>
-                <Typography variant="h5" fontWeight={400}>
-                  Sạc nhanh 30w
-                </Typography>
-              </BoxFlex>
-              <BoxFlex
-                className={isShowAnimation ? "activeAnimation" : ""}
-                sx={{
-                  ...styleAnimationPhoneFutureProducInfoSection,
-                  animationDelay: "0.8s",
-                }}
-              >
-                <BoxFlex sx={{ width: "max-content" }}>
-                  <BoxImage sx={{ width: "80px" }}>
-                    <img src={tesss} alt="" />
-                  </BoxImage>
-                </BoxFlex>
-                <Typography variant="h5" fontWeight={400}>
-                  Ưu dãi bất ngờ{" "}
-                </Typography>
-              </BoxFlex>
+              {phoneFutures.map((item, index) => {
+                return (
+                  <BoxFlex
+                    key={index}
+                    className={isShowAnimation ? "activeAnimation" : ""}
+                    sx={{
+                      ...styleAnimationPhoneFutureProducInfoSection,
+                      animationDelay: "0.4s",
+                    }}
+                  >
+                    <BoxFlex
+                      sx={{
+                        width: "max-content",
+                        display: { xs: "none", lg: "block" },
+                      }}
+                    >
+                      <BoxImage sx={{ width: "80px" }}>
+                        <img src={item.icon} alt="" />
+                      </BoxImage>
+                    </BoxFlex>
+                    <Typography variant="h5" fontWeight={400}>
+                      {item.title}
+                    </Typography>
+                  </BoxFlex>
+                );
+              })}
             </BoxFlexColumn>
           </BoxFlexColumn>
         </Grid>

@@ -84,6 +84,17 @@ export const styleAnimationPhoneHeroSection = {
     },
   },
 };
+export const BoxUiHeroSection = styled(Box)(({ theme }) => ({
+  position: "absolute",
+  right: 0,
+  top: "0",
+  height: "80%",
+  width: "50%",
+  background:
+    "linear-gradient(359deg, #8738EB 15.94%, rgba(135, 56, 235, 0.00) 109.56%)",
+  borderBottomRightRadius: "40%",
+  borderBottomLeftRadius: "40%",
+}));
 // CSS PRODUCT INFO
 
 export const styleAnimationPhoneProducInfoSection = {

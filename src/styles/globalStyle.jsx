@@ -6,7 +6,6 @@ export const AppWrapper = styled(Box)(({ theme }) => ({
   height: "100%",
   minHeight: "100vh",
   overflowX: "hidden",
-  // background: theme.palette.primary.main,
 }));
 
 // CUSTOM BOX FLEX
@@ -90,12 +89,9 @@ export const FooterWrapper = styled(Box)(({ theme }) => ({
     left: 0,
     width: "100px",
     height: "100px",
-    // transform: "translate(50%,50%)",
     borrderRadus: "50%",
     background: "#BA68C8",
     filter: "blur(80px)",
-    // background: "rgba(255, 255, 255, 0.1)",
-    // filter: "blur(1px)",
   },
   "&::after": {
     content: '""',
@@ -104,20 +100,25 @@ export const FooterWrapper = styled(Box)(({ theme }) => ({
     right: 0,
     width: "100px",
     height: "100px",
-    // transform: "translate(50%,50%)",
     borrderRadus: "50%",
     background: "#1183E6",
-
     filter: "blur(80px)",
-    // background: "rgba(255, 255, 255, 0.1)",
-    // filter: "blur(1px)",
   },
 }));
 // HEADER
 export const HeaderWrapper = styled(Box)(({ theme }) => ({
-  padding: "20px 0px",
-  position: "relative",
+  padding: "15px 0px",
+  position: "fixed",
+  width: "100%",
+  top: 0,
+  left: 0,
+  transition: "all .2s linear",
+  overflow: "hidden",
   zIndex: 10000,
+  "&.active": {
+    background: theme.palette.primary.main,
+    boxShadow: "0px 2px 10px -6px rgba(0,0,0,0.5)",
+  },
 }));
 
 export const NavItem = styled(Box)(({ theme }) => ({
@@ -159,19 +160,12 @@ export const NavMobileHeader = styled(Box)(({ theme }) => ({
   borderColor: theme.palette.secondary.main,
 }));
 export const LightDarkModeBox = styled(Box)(({ theme }) => ({
-  width: "50px",
-  height: "50px",
+  width: "40px",
+  height: "40px",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   borderRadius: "50%",
   cursor: "pointer",
   background: theme.palette.secondary.main,
-
-  // // display: "block",
-  // background: "#ebebeb",
-  // overflow: "hidden",
-  // boxShadow:
-  //   "inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4)",
-  // cursor: "pointer",
 }));
