@@ -18,7 +18,7 @@ const SlideSectionHomePage = () => {
       <BoxFlexColumn sx={{ gap: "24px" }}>
         <BoxFlexColumnCenter sx={{ gap: "16px" }}>
           <Typography variant="h3" textAlign={'center'}>How to bling charge</Typography>
-          <Typography variant="h6" textAlign={"center"}>
+          <Typography variant="h6" textAlign={{ xs: "justify", sm: "center" }}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type

@@ -31,7 +31,7 @@ const HeroSectionHomePage = () => {
         <Typography variant="h2" textAlign={{ xs: "center", lg: "left" }}>
           Charge & Earn
         </Typography>
-        <Typography variant="h6" fontWeight={300}>
+        <Typography variant="h6" fontWeight={300} textAlign={{ xs: "justify", sm: "left" }}>
           You can get started with your marketing automation in a few minutesand
           you can send email newsletter with your audienceYou can get started
           with your marketing automation in a few{" "}
