@@ -19,6 +19,7 @@ export const BoxSlideWrapper = styled(Box)(({ theme }) => ({
 
 // CSS HEROSECTION
 export const styleAnimationContentTextHeroSection = {
+  marginTop:'50px',
   animation: "animationContent .5s linear ",
   "@keyframes animationContent": {
     "0%": {

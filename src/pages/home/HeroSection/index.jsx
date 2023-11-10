@@ -25,6 +25,7 @@ const HeroSectionHomePage = () => {
         sx={{
           width: { sm: "100%", lg: "50%" },
           gap: "20px",
+          top:'10px',
           ...styleAnimationContentTextHeroSection,
         }}
       >
