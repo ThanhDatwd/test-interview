@@ -4,15 +4,15 @@ const theme = extendTheme({
     light: {
       palette: {
         primary: {
-          main: "#10033F",
+          main: "#ffff",
           contrastText: "#ffff",
         },
         secondary: {
-          main: "#8738EB",
+          main: "#10033F",
           contrastText: "#ffff",
         },
         text: {
-          primary: "black",
+          primary: "#8738EB",
           secondary: "yellow",
         },
       },

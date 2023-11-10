@@ -5,12 +5,20 @@ import {
   BoxFlexEnd,
   BoxFlexSpaceBetween,
   BoxImage,
+  HeaderWrapper,
+  LightDarkModeBox,
+  NavItem,
 } from "~/styles/globalStyle";
-import { HeaderWrapper, NavItem } from "~/styles/homeStyle";
+import { useColorScheme } from "@mui/material/styles";
+import MenuIcon from "@mui/icons-material/Menu";
+import { useState } from "react";
+import NavDisplayMobile from "./NavMobile";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 const navList = [
   {
     title: "Home",
-    route: "/home",
+    route: "/",
   },
   {
     title: "How to buy",
@@ -31,17 +39,15 @@ const navList = [
 ];
 const Header = () => {
   const location = useLocation();
+  const { mode, setMode } = useColorScheme();
+  const [isOpenNavMobile, setIsOpenNavMobile] = useState(false);
   return (
     <HeaderWrapper>
       <BoxFlexSpaceBetween>
-        <BoxImage
-          sx={{
-            height: "36px",
-          }}
-        >
-          <img src="/logoHeader.png" />
+        <BoxImage sx={{ height: "36px" }}>
+          <img src={mode === "dark" ? "/logoDark.svg" : "/logoLight.svg"} />
         </BoxImage>
-        <BoxFlexEnd gap={"0px"}>
+        <BoxFlexEnd sx={{ display: { xs: "none", lg: "flex" } }}>
           {navList.map((item, index) => {
             return (
               <NavItem
@@ -57,8 +63,25 @@ const Header = () => {
               </NavItem>
             );
           })}
+          <LightDarkModeBox>
+            {mode === "light" ? (
+              <DarkModeIcon onClick={() => setMode("dark")} />
+            ) : (
+              <LightModeIcon onClick={() => setMode("light")} />
+            )}
+          </LightDarkModeBox>
         </BoxFlexEnd>
+
+        <MenuIcon
+          onClick={() => setIsOpenNavMobile(!isOpenNavMobile)}
+          sx={{ display: { xs: "block", lg: "none" } }}
+        />
       </BoxFlexSpaceBetween>
+      <NavDisplayMobile
+        isOpenNavMobile={isOpenNavMobile}
+        setIsOpenNavMobile={setIsOpenNavMobile}
+        navList={navList}
+      />
     </HeaderWrapper>
   );
 };

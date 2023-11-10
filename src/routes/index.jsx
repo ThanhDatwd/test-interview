@@ -1,33 +1,14 @@
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "~/pages/home";
 
- const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
-    loader: '',
-    children: [
-      {
-        path: "test",
-        element: <></>,
-        loader: '',
-      },
-    ],
+    loader: "",
   },
-  {
-    path: "/home",
-    element: <HomePage />,
-    loader: '',
-   
-  },
-
 ]);
-const RouterProviderConfig =()=>{
-    return <RouterProvider router={router}/>
-}
-export default RouterProviderConfig
+const RouterProviderConfig = () => {
+  return <RouterProvider router={router} />;
+};
+export default RouterProviderConfig;

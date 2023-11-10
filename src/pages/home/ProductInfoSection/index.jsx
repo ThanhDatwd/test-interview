@@ -6,6 +6,12 @@ import imagePhone2 from "~/assets/images/imagePhone2.png";
 import iconPlug from "~/assets/icons/iconPlug.svg";
 import iconSaveMoney from "~/assets/icons/iconSaveMoney.svg";
 import iconBuy from "~/assets/icons/iconBuy.svg";
+import tesss from "~/assets/icons/tessss.svg";
+import {
+  styleAnimationContentTextProductInfoSection,
+  styleAnimationPhoneFutureProducInfoSection,
+  styleAnimationPhoneProducInfoSection,
+} from "~/styles/homeStyle";
 const ProductInfoSectionHomePage = () => {
   const sectionRef = useRef(null);
   const [isShowAnimation, setIsShowAnimation] = useState(false);
@@ -31,31 +37,11 @@ const ProductInfoSectionHomePage = () => {
   }, []);
   return (
     <Box ref={sectionRef}>
-      <Grid container >
+      <Grid container>
         <Grid item lg={6} sm={12}>
           <BoxImage
             className={isShowAnimation ? "activeAnimation" : ""}
-            sx={{
-              width: "0%",
-              "&.activeAnimation": {
-                width: "100%",
-                animation: "animationPhone2 .5s linear ",
-                "@keyframes animationPhone2": {
-                  "0%": {
-                    opacity: 0,
-                    width: "0%",
-                  },
-                  "50%": {
-                    opacity: 0.5,
-                    width: "50%",
-                  },
-                  "100%": {
-                    opacity: 1,
-                    width: "100%",
-                  },
-                },
-              },
-            }}
+            sx={styleAnimationPhoneProducInfoSection}
           >
             <img src={imagePhone2} alt="" />
           </BoxImage>
@@ -68,29 +54,20 @@ const ProductInfoSectionHomePage = () => {
           >
             <BoxFlexColumn
               className={isShowAnimation ? "activeAnimation" : ""}
-              sx={{
-                opacity: 0,
-                "&.activeAnimation": {
-                  opacity: 1,
-                  animation: "animationPhone3 .5s linear ",
-                  "@keyframes animationPhone3": {
-                    "0%": {
-                      opacity: 0,
-                    },
-                    "50%": {
-                      opacity: 0.5,
-                    },
-                    "100%": {
-                      opacity: 1,
-                    },
-                  },
-                },
-              }}
+              sx={styleAnimationContentTextProductInfoSection}
             >
-              <Typography variant="h3" fontWeight={700} textAlign={{xs:"center",sm:'left'}}>
+              <Typography
+                variant="h3"
+                fontWeight={700}
+                textAlign={{ xs: "center", sm: "left" }}
+              >
                 Let your charger make money for you
               </Typography>
-              <Typography variant="h6" fontWeight={400} textAlign={{xs:'justify',sm:'left'}}>
+              <Typography
+                variant="h6"
+                fontWeight={400}
+                textAlign={{ xs: "justify", sm: "left" }}
+              >
                 Lorem Ipsum has been the industrys standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type
                 and scrambled it to make a type specimen book.
@@ -98,29 +75,11 @@ const ProductInfoSectionHomePage = () => {
             </BoxFlexColumn>
             <BoxFlexColumn sx={{ gap: "20px" }}>
               <Typography
-              textAlign={{xs:'center',sm:'left'}}
+                textAlign={{ xs: "center", sm: "left" }}
                 variant="h5"
                 fontWeight={400}
                 className={isShowAnimation ? "activeAnimation" : ""}
-                sx={{
-                  opacity: 0,
-                  "&.activeAnimation": {
-                    opacity: 1,
-                    animation: "animationPhone4 .5s linear  ",
-                    // animationDelay:'0.1s',
-                    "@keyframes animationPhone4": {
-                      "0%": {
-                        opacity: 0,
-                      },
-                      "50%": {
-                        opacity: 0.5,
-                      },
-                      "100%": {
-                        opacity: 1,
-                      },
-                    },
-                  },
-                }}
+                sx={styleAnimationContentTextProductInfoSection}
               >
                 Leverage on your Blingcharge charger and create a stern of
                 passive income at no cost.
@@ -128,28 +87,15 @@ const ProductInfoSectionHomePage = () => {
               <BoxFlex
                 className={isShowAnimation ? "activeAnimation" : ""}
                 sx={{
-                  opacity: 0,
-                  "&.activeAnimation": {
-                    opacity: 1,
-                    animation: "animationPhone4 .5s linear  ",
-                    animationDelay:'0.4s',
-                    "@keyframes animationPhone4": {
-                      "0%": {
-                        opacity: 0,
-                      },
-                      "50%": {
-                        opacity: 0.5,
-                      },
-                      "100%": {
-                        opacity: 1,
-                      },
-                    },
-                  },
+                  ...styleAnimationPhoneFutureProducInfoSection,
+                  animationDelay: "0.4s",
                 }}
               >
-                <BoxImage>
-                  <img src={iconBuy} alt="" />
-                </BoxImage>
+                <BoxFlex sx={{ width: "max-content" }}>
+                  <BoxImage sx={{ width: "80px" }}>
+                    <img src={iconBuy} alt="" />
+                  </BoxImage>
+                </BoxFlex>
                 <Typography variant="h5" fontWeight={400}>
                   Buy NFT adapter or take NFT 5W___{" "}
                 </Typography>
@@ -157,28 +103,15 @@ const ProductInfoSectionHomePage = () => {
               <BoxFlex
                 className={isShowAnimation ? "activeAnimation" : ""}
                 sx={{
-                  opacity: 0,
-                  "&.activeAnimation": {
-                    opacity: 1,
-                    animation: "animationPhone4 .5s linear  ",
-                    animationDelay:'0.6s',
-                    "@keyframes animationPhone4": {
-                      "0%": {
-                        opacity: 0,
-                      },
-                      "50%": {
-                        opacity: 0.5,
-                      },
-                      "100%": {
-                        opacity: 1,
-                      },
-                    },
-                  },
+                  ...styleAnimationPhoneFutureProducInfoSection,
+                  animationDelay: "0.6s",
                 }}
               >
-                <BoxImage>
-                  <img src={iconPlug} alt="" />
-                </BoxImage>
+                <BoxFlex sx={{ width: "max-content" }}>
+                  <BoxImage sx={{ width: "80px" }}>
+                    <img src={iconPlug} alt="" />
+                  </BoxImage>
+                </BoxFlex>
                 <Typography variant="h5" fontWeight={400}>
                   Sạc nhanh 30w
                 </Typography>
@@ -186,28 +119,15 @@ const ProductInfoSectionHomePage = () => {
               <BoxFlex
                 className={isShowAnimation ? "activeAnimation" : ""}
                 sx={{
-                  opacity: 0,
-                  "&.activeAnimation": {
-                    opacity: 1,
-                    animation: "animationPhone4 .5s linear  ",
-                    animationDelay:'0.8s',
-                    "@keyframes animationPhone4": {
-                      "0%": {
-                        opacity: 0,
-                      },
-                      "50%": {
-                        opacity: 0.5,
-                      },
-                      "100%": {
-                        opacity: 1,
-                      },
-                    },
-                  },
+                  ...styleAnimationPhoneFutureProducInfoSection,
+                  animationDelay: "0.8s",
                 }}
               >
-                <BoxImage>
-                  <img src={iconPlug} alt="" />
-                </BoxImage>
+                <BoxFlex sx={{ width: "max-content" }}>
+                  <BoxImage sx={{ width: "80px" }}>
+                    <img src={tesss} alt="" />
+                  </BoxImage>
+                </BoxFlex>
                 <Typography variant="h5" fontWeight={400}>
                   Ưu dãi bất ngờ{" "}
                 </Typography>

@@ -5,19 +5,24 @@ import {
   BoxImage,
   FooterWrapper,
 } from "~/styles/globalStyle";
+import { useColorScheme } from "@mui/material/styles";
+
 import iconFacebook from "~/assets/icons/iconFacebook.svg";
 import iconTwitter from "~/assets/icons/iconTwitter.svg";
 import iconInstagram from "~/assets/icons/iconInstagram.svg";
 
 const Footer = () => {
+  const { mode } = useColorScheme();
   return (
     <FooterWrapper py={4}>
       <Container>
-        <Grid container spacing={{lg:0,xs:2}}>
+        <Grid container spacing={{ lg: 0, xs: 2 }}>
           <Grid item lg={4} xs={12}>
             <BoxFlexColumn>
               <BoxImage>
-                <img src="/logoHeader.png" />
+                <img
+                  src={mode === "dark" ? "/logoDark.svg" : "/logoLight.svg"}
+                />
               </BoxImage>
               <Typography variant="h6" fontWeight={400}>
                 Various kinds of NFT that are trending the trend will be reset
@@ -25,10 +30,9 @@ const Footer = () => {
               </Typography>
             </BoxFlexColumn>
           </Grid>
-          <Grid item lg={2} xs={0}>
-          </Grid>
-          <Grid item lg={6} xs={12} container rowSpacing={{xs:4}}>
-            <Grid item xs={12}  lg={4}>
+          <Grid item lg={2} xs={0}></Grid>
+          <Grid item lg={6} xs={12} container rowSpacing={{ xs: 4 }}>
+            <Grid item xs={12} lg={4}>
               <BoxFlexColumn>
                 <Typography variant="subtitle" fontWeight={600}>
                   Categories
@@ -39,7 +43,7 @@ const Footer = () => {
                 <Typography variant="subtitle">Creator NFT</Typography>
               </BoxFlexColumn>
             </Grid>
-            <Grid item xs={12}  lg={4}>
+            <Grid item xs={12} lg={4}>
               <BoxFlexColumn>
                 <Typography variant="subtitle" fontWeight={600}>
                   Contact us
@@ -50,7 +54,7 @@ const Footer = () => {
                 <Typography variant="subtitle">Privacy policy</Typography>
               </BoxFlexColumn>
             </Grid>
-            <Grid item xs={12}  lg={4}>
+            <Grid item xs={12} lg={4}>
               <BoxFlexColumn>
                 <Typography variant="subtitle" fontWeight={600}>
                   Get in touch
@@ -71,7 +75,6 @@ const Footer = () => {
                 </BoxFlex>
               </BoxFlexColumn>
             </Grid>
-          
           </Grid>
         </Grid>
       </Container>
