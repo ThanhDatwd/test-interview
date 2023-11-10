@@ -39,7 +39,7 @@ const AdapterSectionHomePage = () => {
         <Grid container spacing={{ lg: "50px", xs: "20px" }}>
           {listAdapter.map((item, index) => {
             return (
-              <Grid item lg={4} xs={12} key={index}>
+              <Grid item lg={4} xs={6} key={index}>
                 <BoxImage sx={{ width: "100%" }}>
                   <img src={item.image} alt="" />
                 </BoxImage>
